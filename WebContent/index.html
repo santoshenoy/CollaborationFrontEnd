@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>
+		<center>Collaboration</center>
+	</h1>
+	<hr>
+	<a href="#/blog">Blog</a>
+	<a href="#/friend">Friend</a>
+	<a href="#/job">Job</a>
+	</hr>
+	<div ng-view></div>
+
+</body>
+<script src="lib/angular.min.js"></script>
+<script src="lib/angular-route.js"></script>
+<script src="js/app.js"></script>
+<script src="js/BlogController.js"></script>
+<script src="js/HomeController.js"></script>
+<script src="js/JobController.js"></script>
+<script src="js/FriendController.js"></script>
+</html>
