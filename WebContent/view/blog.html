@@ -2,11 +2,22 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Blog!</title>
 </head>
 <body>
-	<div ng-controller="BlogController">
-		<h2>{{message}}</h2>
-	</div>
+	<form>
+		<input type="text" ng-model="blog.id" placeholder="Enter Blog ID"
+			required> <br> <input type="text" ng-model="blog.name"
+			placeholder="Enter Name" required> <br> <input
+			type="text" ng-model="blog.description"
+			placeholder="Enter Description" required> <br> <input
+			type="text" ng-model="blog.u_id" placeholder="Enter User ID" required>
+		<input type="text" ng-model="blog.status"
+			placeholder="Enter Blog Status" required> <br> <input
+			type="text" ng-model="blog.b_date" placeholder="Enter Blog Date"
+			required> <br>
+			<input type="button"
+			ng-click="registerBlog()" value="Register" title="Click to Register Blog">
+	</form>
 </body>
 </html>

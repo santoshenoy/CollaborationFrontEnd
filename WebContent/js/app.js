@@ -22,6 +22,11 @@ app.config(function($routeProvider) {
 		controller : 'JobController'
 	})
 
+	.when('/register', {
+		templateUrl : 'view/register.html',
+		controller : 'UserController'
+	})
+
 	.otherwise({
 		redirectTo : '/'
 	});
