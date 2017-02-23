@@ -2,11 +2,23 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Jobs!</title>
 </head>
 <body>
-	<div ng-controller="JobController">
-		<h1>{{message}}</h1>
-	</div>
+	<form>
+		<input type="text" ng-model="job.title" placeholder="Enter Job Title" required> 
+			<br> 
+			<input type="text" ng-model="job.u_id" placeholder="Enter User Id" required> 
+			<br> 
+			<input type="text" ng-model="job.description" placeholder="Enter Job Description" required> 
+			<br> 
+			<input type="date" ng-model="job.dateTime" placeholder="Enter Job Date" required> 
+			<br> 
+			<input type="text" ng-model="job.qualification" placeholder="Enter Job Qualification" required> 
+			<br> 
+			<input type="text" ng-model="job.status" placeholder="Enter Job Status" required> 
+			<br> 
+			<input type="button" ng-click="registerJob()" value="Register" title="Click to Register Job">
+	</form>
 </body>
 </html>

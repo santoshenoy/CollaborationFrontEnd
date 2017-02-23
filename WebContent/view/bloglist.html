@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>List of Blogs</h1>
+	<table>
+		<tr>
+			<th>Blog ID</th>
+			<th>Blog Name</th>
+			<th>Blog Description</th>
+			<th>User ID</th>
+			<th>Status</th>
+			<th>Blog Date</th>
+		</tr>
+		<tr ng-repeat="b in blogs">
+			<td>{{b.id}}</td>
+			<td>{{b.name}}</td>
+			<td>{{b.description}}</td>
+			<td>{{b.u_id}}</td>
+			<td>{{b.status}}</td>
+			<td>{{b.b_date}}</td>
+		</tr>
+	</table>
+</body>
+</html>

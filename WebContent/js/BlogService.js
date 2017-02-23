@@ -12,7 +12,12 @@ app.factory('BlogService', function($http) {
 						console.log(response.status)
 						return response.status
 					});
-		}
+		},
+	getAllBlogs : function() {
+		console.log('Entering getAllblogs in Blog Service')
+		return $http.get(BASE_URL + "listBlog")
+	}
+
 
 	}
 })

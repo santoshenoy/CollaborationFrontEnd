@@ -27,6 +27,21 @@ app.config(function($routeProvider) {
 		controller : 'UserController'
 	})
 
+	.when('/listuser', {
+		templateUrl : 'view/listuser.html',
+		controller : 'UserController'
+	})
+
+	.when('/bloglist', {
+		templateUrl : 'view/bloglist.html',
+		controller : 'BlogController'
+	})
+
+	.when('/joblist', {
+		templateUrl : 'view/joblist.html',
+		controller : 'JobController'
+	})
+
 	.otherwise({
 		redirectTo : '/'
 	});

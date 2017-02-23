@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>List Of Users</h1>
+	<table>
+		<tr>
+			<th>USERNAME</th>
+			<th>NAME</th>
+			<th>PASSWORD</th>
+			<th>EMAIL</th>
+			<th>ROLE</th>
+			<th>isONLINE</th>
+			<th>DATE OF BIRTH</th>
+			<th>MOBILE NUMBER</th>
+			<th>GENDER</th>
+			<th>ADDRESS</th>
+			<th>STATUS</th>
+		</tr>
+		<tr ng-repeat="u in users">
+			<td>{{u.id}}</td>
+			<td>{{u.nam}}</td>
+			<td>{{u.psswrd}}</td>
+			<td>{{u.mail}}</td>
+			<td>{{u.role}}</td>
+			<td>{{u.isOnline}}</td>
+			<td>{{u.dob}}</td>
+			<td>{{u.mobile}}</td>
+			<td>{{u.gender}}</td>
+			<td>{{u.address}}</td>
+			<td>{{u.status}}</td>
+		</tr>
+	</table>
+</body>
+</html>

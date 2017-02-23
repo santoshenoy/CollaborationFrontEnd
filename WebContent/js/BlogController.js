@@ -17,4 +17,14 @@ app.controller('BlogController', function($scope, $location, BlogService) {
 			$location.path("/home");
 		});
 	}
+	
+	function getAllBlogs() {
+		console.log("Entered getAllBlogs")
+		BlogService.getAllBlogs().then(function(response) {
+			console.log(response.status)
+			console.log(response.data)
+			$scope.blogs = response.data
+		})
+	}
+	getAllBlogs()
 });

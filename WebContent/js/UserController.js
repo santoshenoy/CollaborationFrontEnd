@@ -12,7 +12,6 @@ app.controller('UserController', function($scope, $location, UserService) {
 		mobile : '',
 		gender : '',
 		address : '',
-		role : '',
 		status : '',
 	};
 	$scope.message;
@@ -23,4 +22,14 @@ app.controller('UserController', function($scope, $location, UserService) {
 			$location.path("/home");
 		});
 	}
+
+	function getAllUsers() {
+		console.log("Entered getAllUsers")
+		UserService.getAllUsers().then(function(response) {
+			console.log(response.status)
+			console.log(response.data)
+			$scope.users = response.data
+		})
+	}
+	getAllUsers()
 })

@@ -1,10 +1,9 @@
-app.factory('UserService', function($http) {
-	console.log('Entered UserService')
-
+app.factory('JobService', function($http) {
+	console.log('Entered the Job Service')
 	var BASE_URL = "http://localhost:8081/CollaborationRestController/"
 	return {
-		registerUser : function(user) {
-			return $http.post(BASE_URL + "addUser/", user).then(
+		registerJob : function(job) {
+			return $http.post(BASE_URL + "addJob/", job).then(
 					function(response) {
 						console.log(response.status)
 						console.log(response.headers.location)
@@ -13,12 +12,10 @@ app.factory('UserService', function($http) {
 						console.log(response.status)
 						return response.status
 					});
-
 		},
-
-		getAllUsers : function() {
-			console.log('Entering getAllUsers in User Service')
-			return $http.get(BASE_URL + "listUser")
+		getAllJobs : function() {
+			console.log('Entering getAllJobs in Job Service')
+			return $http.get(BASE_URL + "listJob")
 		}
 
 	}
