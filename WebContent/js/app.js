@@ -42,6 +42,16 @@ app.config(function($routeProvider) {
 		controller : 'JobController'
 	})
 
+	.when('/forum', {
+		templateUrl : 'view/forum.html',
+		controller : 'ForumController'
+	})
+
+	.when('/forumlist', {
+		templateUrl : 'view/forumlist.html',
+		controller : 'ForumController'
+	})
+
 	.otherwise({
 		redirectTo : '/'
 	});
