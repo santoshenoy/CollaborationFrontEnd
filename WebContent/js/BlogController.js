@@ -8,6 +8,7 @@ app.controller('BlogController', function($scope, $location, BlogService) {
 		u_id : '',
 		status : '',
 		b_date : '',
+		date2 : ''
 	};
 	$scope.message;
 	$scope.registerBlog = function() {

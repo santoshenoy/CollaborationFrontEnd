@@ -1,6 +1,6 @@
 app.factory('ForumService', function($http) {
 	console.log('Entered the Forum Service')
-	var BASE_URL = "http://localhost:8081/CollaborationRestController/"
+	var BASE_URL = "http://localhost:8083/CollaborationRestController/"
 	return {
 		registerForum : function(forum) {
 			return $http.post(BASE_URL + "addForum/", forum).then(

@@ -1,6 +1,6 @@
 app.factory('JobService', function($http) {
 	console.log('Entered the Job Service')
-	var BASE_URL = "http://localhost:8081/CollaborationRestController/"
+	var BASE_URL = "http://localhost:8083/CollaborationRestController/"
 	return {
 		registerJob : function(job) {
 			return $http.post(BASE_URL + "addJob/", job).then(

@@ -1,6 +1,6 @@
 app.factory('BlogService', function($http) {
 	console.log('Entered the Blog Service')
-	var BASE_URL = "http://localhost:8081/CollaborationRestController/"
+	var BASE_URL = "http://localhost:8083/CollaborationRestController/"
 	return {
 		registerBlog : function(blog) {
 			return $http.post(BASE_URL + "addBlog/", blog).then(

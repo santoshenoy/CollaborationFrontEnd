@@ -3,6 +3,37 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Register Here!</title>
+<style>
+input[type=button] {
+	background-color: green;
+	color: white;
+	padding: 14px 70px;
+	display: block;
+	margin: left;
+	text-align: center;
+	border: none;
+	cursor: pointer;
+	width: 20%;
+}
+
+input[type=text], [type=password] {
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	width: 35%;
+}
+
+input[type=date] {
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	width: 20%;
+}
+</style>
 </head>
 <body>
 	<form>
@@ -12,7 +43,7 @@
 			type="password" ng-model="user.psswrd" placeholder="Enter Password"
 			required> <br> <input type="text" ng-model="user.mail"
 			placeholder="Enter Email Address" required> <br> <input
-			type="text" ng-model="user.dob" placeholder="Enter Date of Birth"
+			type="date" ng-model="user.dob" placeholder="Enter Date of Birth"
 			required> <br> <input type="text" ng-model="user.mobile"
 			placeholder="Enter Mobile Number" required> <br> <input
 			type="text" ng-model="user.gender" placeholder="Enter Gender"

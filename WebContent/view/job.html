@@ -3,22 +3,52 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Jobs!</title>
+<style>
+input[type=button] {
+	background-color: green;
+	color: white;
+	padding: 14px 70px;
+	display: block;
+	margin: left;
+	text-align: center;
+	border: none;
+	cursor: pointer;
+	width: 20%;
+}
+
+input[type=text] {
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	width: 35%;
+}
+
+input[type=date] {
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	width: 20%;
+}
+</style>
 </head>
 <body>
 	<form>
-		<input type="text" ng-model="job.title" placeholder="Enter Job Title" required> 
-			<br> 
-			<input type="text" ng-model="job.u_id" placeholder="Enter User Id" required> 
-			<br> 
-			<input type="text" ng-model="job.description" placeholder="Enter Job Description" required> 
-			<br> 
-			<input type="date" ng-model="job.dateTime" placeholder="Enter Job Date" required> 
-			<br> 
-			<input type="text" ng-model="job.qualification" placeholder="Enter Job Qualification" required> 
-			<br> 
-			<input type="text" ng-model="job.status" placeholder="Enter Job Status" required> 
-			<br> 
-			<input type="button" ng-click="registerJob()" value="Register" title="Click to Register Job">
+		<input type="text" ng-model="job.title" placeholder="Enter Job Title"
+			required> <br> <input type="text" ng-model="job.u_id"
+			placeholder="Enter User Id" required> <br> <input
+			type="text" ng-model="job.description"
+			placeholder="Enter Job Description" required> <br> <input
+			type="date" ng-model="job.dateTime" required> <br> <input
+			type="text" ng-model="job.qualification"
+			placeholder="Enter Job Qualification" required> <br> <input
+			type="text" ng-model="job.status" placeholder="Enter Job Status"
+			required> <br> <input type="button"
+			ng-click="registerJob()" value="Register"
+			title="Click to Register Job">
 	</form>
 </body>
 </html>

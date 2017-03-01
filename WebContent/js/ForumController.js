@@ -8,6 +8,7 @@ app.controller('ForumController', function($scope, $location, ForumService) {
 		u_id : '',
 		status : '',
 		f_date : '',
+		date3 : ''
 	};
 	$scope.message;
 	$scope.registerForum = function() {

@@ -13,6 +13,7 @@ app.controller('UserController', function($scope, $location, UserService) {
 		gender : '',
 		address : '',
 		status : '',
+		date4 : ''
 	};
 	$scope.message;
 	$scope.registerUser = function() {

@@ -8,6 +8,7 @@ app.controller('JobController', function($scope, $location, JobService) {
 		dateTime : '',
 		qualification : '',
 		status : '',
+		date1 : ''
 	};
 	$scope.message;
 	$scope.registerJob = function() {
