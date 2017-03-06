@@ -1,4 +1,4 @@
-var app = angular.module('myApp', [ 'ngRoute' ]);
+var app = angular.module('myApp', [ 'ngRoute', 'ngCookies' ]);
 app.config(function($routeProvider) {
 	$routeProvider
 
@@ -52,8 +52,53 @@ app.config(function($routeProvider) {
 		controller : 'ForumController'
 	})
 
+	.when('/login', {
+		templateUrl : 'view/login.html',
+		controller : 'UserController'
+	})
+
+	.when('/logout', {
+		templateUrl : 'view/home.html',
+		controller : 'UserController'
+	})
+
 	.otherwise({
 		redirectTo : '/'
 	});
 
+});
+
+app.run(function($rootScope, $location, $cookieStore, $http) {
+	$rootScope.$on('$locationChangeStart', function(event, next, current) {
+		console.log("$locationChangeStart")
+		var userPages = [ '/listuser' ]
+		var adminPages = [ "/bloglist", "/joblist" ]
+		var currentPage = $location.path()
+		var isUserPage = $.inArray(currentPage, userPages) == 1;
+		var isAdminPage = $.inArray(currentPage, adminPages) == 1;
+		var isLoggedIn = $rootScope.currentUser.id;
+		console.log("isLoggedIn:" + isLoggedIn)
+		console.log("isUserPage:" + isUserPage)
+		console.log("isAdminPage:" + isAdminPage)
+		if (!isLoggedIn) {
+			if (isUserPage || isAdminPage) {
+				console.log("Navigating to login page:")
+				alert("You need to loggin to do this operation")
+				$location.path('/');
+			}
+		} else {
+			var role = $rootScope.currentUser.role;
+			if (isAdminPage && role != 'ADMIN') {
+				alert("You can not do this operation as you are logged as : "
+						+ role)
+				$location.path('/login');
+			}
+		}
+	});
+
+	$rootScope.currentUser = $cookieStore.get('currentUser') || {};
+	if ($rootScope.currentUser) {
+		$http.defaults.headers.common['Authorization'] = 'Basic'
+				+ $rootScope.currentUser;
+	}
 });
