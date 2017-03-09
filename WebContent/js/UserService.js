@@ -59,6 +59,5 @@ app.factory('UserService', function($http, $q, $rootScope) {
 			console.log('Entering getAllUsers in User Service')
 			return $http.get(BASE_URL + "listUser")
 		}
-
 	}
 })

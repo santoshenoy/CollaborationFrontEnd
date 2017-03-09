@@ -17,6 +17,5 @@ app.factory('JobService', function($http) {
 			console.log('Entering getAllJobs in Job Service')
 			return $http.get(BASE_URL + "listJob")
 		}
-
 	}
 })

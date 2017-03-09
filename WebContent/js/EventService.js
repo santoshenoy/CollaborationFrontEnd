@@ -1,9 +1,9 @@
-app.factory('BlogService', function($http) {
-	console.log('Entered the Blog Service')
+app.factory('EventService', function($http) {
+	console.log('Entered the Event Service')
 	var BASE_URL = "http://localhost:8083/CollaborationRestController/"
 	return {
-		registerBlog : function(blog) {
-			return $http.post(BASE_URL + "addBlog/", blog).then(
+		registerEvent : function(event) {
+			return $http.post(BASE_URL + "addEvent/", event).then(
 					function(response) {
 						console.log(response.status)
 						console.log(response.headers.location)
@@ -13,9 +13,9 @@ app.factory('BlogService', function($http) {
 						return response.status
 					});
 		},
-		getAllBlogs : function() {
-			console.log('Entering getAllblogs in Blog Service')
-			return $http.get(BASE_URL + "listBlog")
+		getAllEvents : function() {
+			console.log('Entering getAllEvents in Event Service')
+			return $http.get(BASE_URL + "listEvent")
 		}
 	}
 })

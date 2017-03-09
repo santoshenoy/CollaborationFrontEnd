@@ -13,11 +13,9 @@ app.factory('ForumService', function($http) {
 						return response.status
 					});
 		},
-	getAllForums : function() {
-		console.log('Entering getAllForums in Forum Service')
-		return $http.get(BASE_URL + "listForum")
-	}
-
-
+		getAllForums : function() {
+			console.log('Entering getAllForums in Forum Service')
+			return $http.get(BASE_URL + "listForum")
+		}
 	}
 })

@@ -52,6 +52,16 @@ app.config(function($routeProvider) {
 		controller : 'ForumController'
 	})
 
+	.when('/event', {
+		templateUrl : 'view/event.html',
+		controller : 'EventController'
+	})
+
+	.when('/eventlist', {
+		templateUrl : 'view/eventlist.html',
+		controller : 'EventController'
+	})
+
 	.when('/login', {
 		templateUrl : 'view/login.html',
 		controller : 'UserController'
