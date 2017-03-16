@@ -3,15 +3,46 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<style>
+input[type=submit] {
+	background-color: green;
+	color: white;
+	padding: 14px 70px;
+	display: block;
+	margin: left;
+	text-align: center;
+	border: none;
+	cursor: pointer;
+	width: 70%;
+}
+
+input[type=text], [type=password] {
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	width: 80%;
+}
+
+form {
+	background-color: lavender;
+	border: 3px solid #f1f1f1;
+	width: 25%;
+	margin: 0 auto;
+	box-shadow: 5px 5px 5px #888888;
+}
+</style>
 </head>
 <body>
+    <br> <br>
 	<div ng-controller="UserController as ctrl">
 		<form name="form" ng-submit="ctrl.login()" role="form">
-		<input type="text" ng-model="user.id"> 
-		<input type="password" ng-model="user.psswrd"> 
-		<input type="submit" value="Login">
-			</form>
+			<input type="text" ng-model="user.id" placeholder="Enter Username">
+			<br> <input type="password" ng-model="user.psswrd"
+				placeholder="Enter Password"> <br> <input type="submit"
+				value="Log In" class="btn btn-success" title="Click to Log In">
+		</form>
 	</div>
-	<p>You wrote: {{ id }}</p>
 </body>
 </html>

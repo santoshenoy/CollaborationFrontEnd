@@ -12,11 +12,6 @@ app.config(function($routeProvider) {
 		controller : 'BlogController'
 	})
 
-	.when('/friend', {
-		templateUrl : 'view/friend.html',
-		controller : 'FriendController'
-	})
-
 	.when('/job', {
 		templateUrl : 'view/job.html',
 		controller : 'JobController'
@@ -60,6 +55,16 @@ app.config(function($routeProvider) {
 	.when('/eventlist', {
 		templateUrl : 'view/eventlist.html',
 		controller : 'EventController'
+	})
+
+	.when('/friendlist', {
+		templateUrl : 'view/friendlist.html',
+		controller : 'FriendController'
+	})
+
+	.when('/pendingRequest', {
+		templateUrl : 'view/pendingRequest.html',
+		controller : 'FriendController'
 	})
 
 	.when('/login', {

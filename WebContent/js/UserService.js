@@ -55,6 +55,18 @@ app.factory('UserService', function($http, $q, $rootScope) {
 			});
 		},
 
+		friendRequest : function(id) {
+			console.log("Entering Service Friend Request")
+			return $http.get(BASE_URL + "sendRequest-" + id).then(
+					function(response) {
+						return response.data;
+					}, function(errResponse) {
+						console.log("Error Adding Friend");
+						return $q.reject(errResponse);
+					});
+
+		},
+
 		getAllUsers : function() {
 			console.log('Entering getAllUsers in User Service')
 			return $http.get(BASE_URL + "listUser")

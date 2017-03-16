@@ -102,6 +102,19 @@ app
 						$location.path('/login');
 					}
 
+					$scope.friendRequest = function(id) {
+						console.log("Entering Send Friend Request");
+						UserService.friendRequest(id).then(function(response) {
+							console.log(response.status);
+							alert('FriendRequest is Sent');
+							getAllUsers();
+							$location.path("/listuser");
+						}, function(errResponse) {
+							console.error("Error sending Friend Request");
+							$location.path("/listuser");
+						})
+					}
+
 					function getAllUsers() {
 						console.log("Entered getAllUsers")
 						UserService.getAllUsers().then(function(response) {

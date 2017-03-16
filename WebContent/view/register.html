@@ -38,19 +38,21 @@ input[type=date] {
 <body>
 	<form>
 		<input type="text" ng-model="user.id" placeholder="Enter Username"
-			required> <br> <input type="text" ng-model="user.nam"
-			placeholder="Enter Full Name" required> <br> <input
-			type="password" ng-model="user.psswrd" placeholder="Enter Password"
-			required> <br> <input type="text" ng-model="user.mail"
-			placeholder="Enter Email Address" required> <br> <input
-			type="date" ng-model="user.dob" placeholder="Enter Date of Birth"
-			required> <br> <input type="text" ng-model="user.mobile"
-			placeholder="Enter Mobile Number" required> <br> <input
-			type="text" ng-model="user.gender" placeholder="Enter Gender"
-			required> <br> <input type="text"
+			required="true"> <br> <input type="text"
+			ng-model="user.nam" placeholder="Enter Full Name" required="true">
+		<br> <input type="password" ng-model="user.psswrd"
+			placeholder="Enter Password" required="true"> <br> <input
+			type="text" ng-model="user.mail" placeholder="Enter Email Address"
+			required="true"> <br> <input type="date"
+			ng-model="user.dob" placeholder="Enter Date of Birth" required="true">
+		<br> <input type="text" ng-model="user.mobile"
+			placeholder="Enter Mobile Number" required="true"> <br>
+		<input type="text" ng-model="user.gender" placeholder="Enter Gender"
+			required="true"> <br> <input type="text"
 			ng-model="user.address" placeholder="Enter Residential Address"
-			required> <br> <input type="button"
-			ng-click="registerUser()" value="Register" title="Click to Register">
+			required="true"> <br> <input type="button"
+			ng-click="registerUser()" value="Register" title="Click to Register"
+			class="btn btn-success">
 	</form>
 </body>
 </html>

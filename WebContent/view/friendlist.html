@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>List of Friends</title>
+<style>
+table {
+	border-collapse: collapse;
+}
+
+td, th {
+	text-align: center;
+	border: 1px solid black;
+}
+</style>
+</head>
+<body>
+	<h1>List of Friends</h1>
+	<table>
+		<tr>
+			<th>Friend ID</th>
+		</tr>
+		<tr ng-repeat="f in friends">
+<!-- 			<td>{{f.f_id}}</td> -->
+<!-- 			<td>{{f.u_id}}</td> -->
+
+				<td>{{f}}</td>
+		</tr>
+	</table>
+</body>
+</html>

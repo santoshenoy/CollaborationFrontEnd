@@ -2,20 +2,35 @@
 <html ng-app="myApp">
 <head>
 <meta charset="ISO-8859-1">
-<title>Collaboration Platform</title>
+<link rel="stylesheet" href="BootStrap/resources/css/bootstrap.min.css">
+<script src="BootStrap/resources/js/bootstrap.min.js"></script>
+<script src="BootStrap/resources/js/jquery.min.js"></script>
+<title>Welcome to WorldLink!</title>
+<style>
+body {
+	background: #16A085; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #16A085, #F4D03F);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #16A085, #F4D03F);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+</style>
 </head>
 <body>
 	<div ng-controller="UserController as ctrl">
 		<h1>
-			<center>Collaboration</center>
+			<center>
+				<strong>WorldLink</strong>
+			</center>
 		</h1>
 		<hr>
-		<a href="#/blog">Blog</a> <a href="#/friend">Friend</a> <a
-			href="#/job">Job</a> <a href="#/register">Register</a> <a
-			href="#/listuser">List Users</a> <a href="#/bloglist">Blog List</a> <a
-			href="#/joblist">Job List</a> <a href="#/forum">Forum</a> <a
-			href="#/forumlist">Forum List</a> <a href="#/event">Event</a> <a
-			href="#/eventlist">Event List</a> <a href="#/login">Login</a> <a
+		<a href="#/blog">Blog</a> <a
+			href="#/pendingRequest">Pending Friend Requests</a> <a href="#/job">Job</a>
+		<a href="#/register">Register</a> <a href="#/listuser">List Users</a>
+		<a href="#/bloglist">Blog List</a> <a href="#/joblist">Job List</a> <a
+			href="#/forum">Forum</a> <a href="#/forumlist">Forum List</a> <a
+			href="#/event">Event</a> <a href="#/eventlist">Event List</a> <a
+			href="#/friendlist">Friend List</a> <a href="#/login">Login</a> <a
 			ng-click="ctrl.logout()">Logout</a>
 		</hr>
 		<div ng-view></div>
@@ -36,6 +51,7 @@
 <script src="js/ForumService.js"></script>
 <script src="js/EventController.js"></script>
 <script src="js/EventService.js"></script>
+<script src="js/FriendService.js"></script>
 <script src="js/angular-cookies.js"></script>
 <script src="js/angular-cookies.min.js"></script>
 <script src="js/jquery-3.1.1.min.js"></script>
