@@ -35,13 +35,15 @@ form {
 </style>
 </head>
 <body>
-    <br> <br>
+	<br>
+	<br>
 	<div ng-controller="UserController as ctrl">
 		<form name="form" ng-submit="ctrl.login()" role="form">
-			<input type="text" ng-model="user.id" placeholder="Enter Username">
-			<br> <input type="password" ng-model="user.psswrd"
-				placeholder="Enter Password"> <br> <input type="submit"
-				value="Log In" class="btn btn-success" title="Click to Log In">
+			<input type="text" ng-model="user.id" placeholder="Enter Username"
+				required="true"> <br> <input type="password"
+				ng-model="user.psswrd" placeholder="Enter Password" required="true">
+			<br> <input type="submit" value="Log In" class="btn btn-success"
+				title="Click to Log In">
 		</form>
 	</div>
 </body>

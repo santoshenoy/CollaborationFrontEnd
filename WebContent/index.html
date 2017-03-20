@@ -24,14 +24,13 @@ body {
 			</center>
 		</h1>
 		<hr>
-		<a href="#/blog">Blog</a> <a
-			href="#/pendingRequest">Pending Friend Requests</a> <a href="#/job">Job</a>
-		<a href="#/register">Register</a> <a href="#/listuser">List Users</a>
-		<a href="#/bloglist">Blog List</a> <a href="#/joblist">Job List</a> <a
-			href="#/forum">Forum</a> <a href="#/forumlist">Forum List</a> <a
-			href="#/event">Event</a> <a href="#/eventlist">Event List</a> <a
-			href="#/friendlist">Friend List</a> <a href="#/login">Login</a> <a
-			ng-click="ctrl.logout()">Logout</a>
+		<a href="#/blog">Blog</a> <a href="#/pendingRequest">Pending
+			Friend Requests</a> <a href="#/job">Job</a> <a href="#/register">Register</a>
+		<a href="#/listuser">List Users</a> <a href="#/bloglist">Blog List</a>
+		<a href="#/joblist">Job List</a> <a href="#/forum">Forum</a> <a
+			href="#/forumlist">Forum List</a> <a href="#/event">Event</a> <a
+			href="#/eventlist">Event List</a> <a href="#/friendlist">Friend
+			List</a> <a href="#/login">Login</a> <a ng-click="ctrl.logout()">Logout</a>
 		</hr>
 		<div ng-view></div>
 	</div>
@@ -39,12 +38,16 @@ body {
 <script src="lib/angular.min.js"></script>
 <script src="lib/angular-route.js"></script>
 <script src="js/app.js"></script>
+<script src="js/sockjs.js"></script>
+<script src="js/stomp.js"></script>
 <script src="js/BlogController.js"></script>
 <script src="js/HomeController.js"></script>
 <script src="js/JobController.js"></script>
 <script src="js/FriendController.js"></script>
 <script src="js/UserController.js"></script>
 <script src="js/UserService.js"></script>
+<script src="js/ChatController.js"></script>
+<script src="js/ChatService.js"></script>
 <script src="js/BlogService.js"></script>
 <script src="js/JobService.js"></script>
 <script src="js/ForumController.js"></script>

@@ -17,6 +17,11 @@ app.config(function($routeProvider) {
 		controller : 'JobController'
 	})
 
+	.when('/chat', {
+		templateUrl : 'view/chat.html',
+		controller : 'ChatController'
+	})
+	
 	.when('/register', {
 		templateUrl : 'view/register.html',
 		controller : 'UserController'
