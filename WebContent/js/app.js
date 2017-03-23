@@ -21,7 +21,7 @@ app.config(function($routeProvider) {
 		templateUrl : 'view/chat.html',
 		controller : 'ChatController'
 	})
-	
+
 	.when('/register', {
 		templateUrl : 'view/register.html',
 		controller : 'UserController'
@@ -75,6 +75,10 @@ app.config(function($routeProvider) {
 	.when('/login', {
 		templateUrl : 'view/login.html',
 		controller : 'UserController'
+	})
+
+	.when('/fileUpload', {
+		templateUrl : 'view/fileUpload.html',
 	})
 
 	.when('/logout', {
