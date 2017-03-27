@@ -4,57 +4,84 @@
 <meta charset="ISO-8859-1">
 <title>Register Here!</title>
 <style>
-input[type=button] {
+input[type=submit] {
 	background-color: green;
 	color: white;
 	padding: 14px 70px;
 	display: block;
-	margin: left;
+	margin: auto;
 	text-align: center;
 	border: none;
 	cursor: pointer;
-	width: 20%;
+	width: 50%;
 }
 
 input[type=text], [type=password] {
 	padding: 12px 20px;
-	margin: 8px 0;
+	margin: 18px 18px;
 	display: inline-block;
 	border: 1px solid #ccc;
 	box-sizing: border-box;
-	width: 35%;
+	width: 80%;
 }
 
 input[type=date] {
 	padding: 12px 20px;
-	margin: 8px 0;
+	margin: 18px 18px;
 	display: inline-block;
 	border: 1px solid #ccc;
 	box-sizing: border-box;
-	width: 20%;
+	width: 80%;
+}
+
+form {
+	background-color: lavender;
+	border: 3px solid #f1f1f1;
+	width: 50%;
+	margin: 200px 500px;
+}
+
+label {
+	margin: 18px;
+	font-size: 15px;
+}
+
+input[type=radio] {
+	margin: 18px;
 }
 </style>
 </head>
 <body>
-	<div>
-		<form>
-			<input type="text" ng-model="user.id" placeholder="Enter Username"
-				required="true"> <br> <input type="text"
-				ng-model="user.nam" placeholder="Enter Full Name" required="true">
-			<br> <input type="password" ng-model="user.psswrd"
-				placeholder="Enter Password" required="true"> <br> <input
-				type="text" ng-model="user.mail" placeholder="Enter Email Address"
-				required="true"> <br> <input type="date"
-				ng-model="user.dob" placeholder="Enter Date of Birth"
-				required="true"> <br> <input type="text"
-				ng-model="user.mobile" placeholder="Enter Mobile Number"
-				required="true"> <br> <input type="text"
-				ng-model="user.gender" placeholder="Enter Gender" required="true">
-			<br> <input type="text" ng-model="user.address"
-				placeholder="Enter Residential Address" required="true"> <br>
-			<input type="button" ng-click="registerUser()" value="Register"
-				title="Click to Register" class="btn btn-success">
+	<div ng-controller="UserController as ctrl">
+		<form name="form" ng-submit="ctrl.registerUser()" role="form">
+			&nbsp; &nbsp; <u>Please fill in the details below: </u><br> <br>
+			<label style="font-size: 18px">USERNAME:</label> <input type="text"
+				ng-model="user.id" placeholder="Enter Desired Username"
+				required="true"> <br> <label style="font-size: 18px">FULL
+				NAME (First, Middle, Surname):</label> <input type="text"
+				ng-model="user.nam" placeholder="Enter Full Name (Without Commas)"
+				required="true"> <br> <label style="font-size: 18px">PASSWORD:</label>
+			<input type="password" ng-model="user.psswrd"
+				placeholder="Enter Desired Password (minimum 6, maximum 20 characters)"
+				required="true"> <br> <label style="font-size: 18px">EMAIL:</label>
+			<br> <input type="text" ng-model="user.mail"
+				placeholder="Enter Email Address" required="true"> <br>
+			<label style="font-size: 18px">DATE OF BIRTH:</label> <input
+				type="date" ng-model="user.dob" placeholder="Enter Date of Birth"
+				required="true"> <br> <label style="font-size: 18px">MOBILE
+				NUMBER:</label> <input type="text" ng-model="user.mobile"
+				placeholder="Enter Mobile Number" required="true"> <br>
+			<label style="font-size: 18px">GENDER:</label> <br> <input
+				type="radio" name="gender" value="Male" ng-model="user.gender"
+				checked>Male<input type="radio" name="gender" value="Female"
+				ng-model="user.gender">Female<input type="radio"
+				name="gender" value="Transgender" ng-model="user.gender">Transgender<br>
+			<label style="font-size: 18px">ADDRESS:</label> <input type="text"
+				ng-model="user.address" placeholder="Enter Residential Address"
+				required="true"> <br> <input type="submit"
+				value="Register" title="Click to Register" class="btn btn-success">
+		</form>
 	</div>
-	</form>
+
 </body>
 </html>

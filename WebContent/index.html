@@ -5,8 +5,7 @@
 <link rel="stylesheet" href="BootStrap/resources/css/bootstrap.min.css">
 <script src="BootStrap/resources/js/bootstrap.min.js"></script>
 <script src="BootStrap/resources/js/jquery.min.js"></script>
-<link href='//fonts.googleapis.com/css?family=Sriracha'
-	rel='stylesheet'>
+<link href='//fonts.googleapis.com/css?family=Sriracha' rel='stylesheet'>
 <link href='//fonts.googleapis.com/css?family=Cutive' rel='stylesheet'>
 <title>Welcome to WorldLink!</title>
 <style>
@@ -23,7 +22,7 @@ body {
 
 .navbar-brand {
 	font-family: 'Sriracha';
-	font-size: 66px;
+	font-size: 40px;
 }
 
 .navbar-nav.navbar-left {
@@ -41,20 +40,31 @@ body {
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<a class="navbar-brand" href="/CollaborationFrontEnd"
-						style="color: gold">WORLDLINK </a>
+						style="color: gold"><strong>WORLDLINK</strong> </a>
 				</div>
 				<nav class="navbar navbar-nav navbar-left">
-					<a href="#/blog">Blog</a> <a href="#/pendingRequest"
-						ng-show="currentUser.id">Pending Friend Requests</a> <a
-						href="#/job" ng-show="currentUser.id">Job</a> <a href="#/listuser"
-						ng-show="currentUser.id">List Users</a> <a href="#/bloglist">Blog
-						List</a> <a href="#/joblist" ng-show="currentUser.id">Job List</a> <a
-						href="#/forum">Forum</a> <a href="#/forumlist">Forum List</a> <a
-						href="#/event" ng-show="currentUser.id">Event</a> <a
-						href="#/eventlist" ng-show="currentUser.id">Event List</a> <a
-						href="#/friendlist" ng-show="currentUser.id">FriendList</a> <a
-						href="#/fileUpload" ng-show="currentUser.id">FileUpload</a> <a
-						href="" ng-show="currentUser.id"> <img
+					<a href="#/blog" style="color: chartreuse; font-size: 19px"><strong>Blog</strong></a>
+					<a href="#/pendingRequest" ng-show="currentUser.id"
+						style="color: chartreuse; font-size: 17px"><strong>Pending
+							Friend Requests</strong></a> <a href="#/job" ng-show="currentUser.id"
+						style="color: chartreuse; font-size: 17px"><strong>Job</strong></a>
+					<a href="#/listuser" ng-show="currentUser.id"
+						style="color: chartreuse; font-size: 17px"><strong>List
+							Users</strong></a> <a href="#/bloglist"
+						style="color: chartreuse; font-size: 17px"><strong>Blog
+							List</strong></a> <a href="#/joblist" ng-show="currentUser.id"
+						style="color: chartreuse; font-size: 17px"><strong>Job
+							List</strong></a> <a href="#/forum" style="color: chartreuse; font-size: 17px"><strong>Forum</strong></a>
+					<a href="#/forumlist" style="color: chartreuse; font-size: 17px"><strong>Forum
+							List</strong></a> <a href="#/event" ng-show="currentUser.id"
+						style="color: chartreuse; font-size: 17px"><strong>Event</strong></a>
+					<a href="#/eventlist" ng-show="currentUser.id"
+						style="color: chartreuse; font-size: 17px"><strong>Event
+							List</strong></a> <a href="#/friendlist" ng-show="currentUser.id"
+						style="color: chartreuse; font-size: 17px"><strong>FriendList</strong></a>
+					<a href="#/fileUpload" ng-show="currentUser.id"
+						style="color: chartreuse; font-size: 17px"><strong>FileUpload</strong></a>
+					<a href="" ng-show="currentUser.id"> <img
 						src="Images/{{currentUser.nam}}" height="65" width="65"></a>
 				</nav>
 				<nav class="navbar navbar-nav navbar-right">
@@ -63,8 +73,8 @@ body {
 						class="glyphicon glyphicon-log-in" style="color: white"></span> <strong>Log
 							In</strong></a> <a href="#/register" ng-hide="currentUser.id"
 						style="color: yellow; font-size: 18px"><span
-						class="glyphicon glyphicon-user" style="color: white"></span> <strong>Register</strong></a><a
-						ng-click="ctrl.logout()" ng-show="currentUser.id"
+						class="glyphicon glyphicon-user" style="color: white"></span> <strong>Sign
+							Up</strong></a><a ng-click="ctrl.logout()" ng-show="currentUser.id"
 						style="color: yellow"><span
 						class="glyphicon glyphicon-log-out"
 						style="color: white; font-size: 18px"></span><strong>
@@ -73,8 +83,8 @@ body {
 			</div>
 		</nav>
 	</div>
-	<div ng-view></div>
 </body>
+<div ng-view></div>
 <script src="lib/angular.min.js"></script>
 <script src="lib/angular-route.js"></script>
 <script src="js/app.js"></script>

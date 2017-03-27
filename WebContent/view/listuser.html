@@ -6,45 +6,46 @@
 <style>
 table {
 	border-collapse: collapse;
+	width: 10%;
+	margin: 100px 500px;
 }
 
-td, th {
+th {
 	text-align: center;
 	border: 1px solid black;
+	color: lawngreen;
+	font-size: 30px;
+	font-weight: 900;
+}
+
+td {
+	text-align: center;
+	border: 1px solid black;
+	color: navy;
+	font-weight: bold;
+}
+
+h1 {
+	margin: 130px 500px;
+	font-size: 60px;
+	color: white;
 }
 </style>
 </head>
 <body>
-	<h1>List Of Users</h1>
+	<h1>
+		<b><u>List of Users</u></b>
+	</h1>
 	<table>
 		<tr>
-			<th>USERNAME</th>
 			<th>NAME</th>
-			<th>PASSWORD</th>
-			<th>EMAIL</th>
-			<th>ROLE</th>
-			<th>isONLINE</th>
-			<th>DATE OF BIRTH</th>
-			<th>MOBILE NUMBER</th>
-			<th>GENDER</th>
-			<th>ADDRESS</th>
 			<th>STATUS</th>
 		</tr>
 		<tr ng-repeat="u in users">
-			<td>{{u.id}}</td>
 			<td>{{u.nam}}</td>
-			<td>{{u.psswrd}}</td>
-			<td>{{u.mail}}</td>
-			<td>{{u.role}}</td>
-			<td>{{u.isOnline}}</td>
-			<td>{{u.date4}}</td>
-			<td>{{u.mobile}}</td>
-			<td>{{u.gender}}</td>
-			<td>{{u.address}}</td>
 			<td>{{u.status}}</td>
-			<td><a href="" ng-click="friendRequest(u.id)" class="btn">Send
-					Request</a></td>
-
+			<td><input type="submit" ng-click="friendRequest(u.id)"
+				class="btn" value="Send Friend Request"></td>
 		</tr>
 	</table>
 </body>

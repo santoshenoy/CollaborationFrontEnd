@@ -21,7 +21,7 @@ app
 						date4 : ''
 					};
 					$scope.message;
-					$scope.registerUser = function() {
+					self.registerUser = function() {
 						console
 								.log('Entered function to save in User Controller')
 						UserService.registerUser($scope.user).then(

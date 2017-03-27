@@ -9,7 +9,7 @@ input[type=submit] {
 	color: white;
 	padding: 14px 70px;
 	display: block;
-	margin: left;
+	margin: 18px 18px;
 	text-align: center;
 	border: none;
 	cursor: pointer;
@@ -18,7 +18,7 @@ input[type=submit] {
 
 input[type=text], [type=password] {
 	padding: 12px 20px;
-	margin: 8px 0;
+	margin: 18px 18px;
 	display: inline-block;
 	border: 1px solid #ccc;
 	box-sizing: border-box;
@@ -29,19 +29,23 @@ form {
 	background-color: lavender;
 	border: 3px solid #f1f1f1;
 	width: 25%;
-	margin: 0 auto;
-	box-shadow: 5px 5px 5px #888888;
+	margin: 200px 500px;
 }
 </style>
 </head>
 <body>
 	<div ng-controller="UserController as ctrl">
 		<form name="form" ng-submit="ctrl.login()" role="form">
-			<input type="text" ng-model="user.id" placeholder="Enter Username"
+			&nbsp; &nbsp; &nbsp; <u>Please enter the details below: </u><input
+				type="text" ng-model="user.id" placeholder="Enter Username"
 				required="true"> <br> <input type="password"
 				ng-model="user.psswrd" placeholder="Enter Password" required="true">
 			<br> <input type="submit" value="Log In" class="btn btn-success"
-				title="Click to Log In">
+				title="Click to Log In"> <br>
+			<p class="message" style="color: black">
+				&nbsp; &nbsp; &nbsp; Not registered? <a href="#/register"><strong>Create
+						an account</strong></a>
+			</p>
 		</form>
 	</div>
 </body>
