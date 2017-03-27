@@ -5,9 +5,11 @@
 <title>List of Users</title>
 <style>
 table {
+	font-family: arial, sans-serif;
 	border-collapse: collapse;
 	width: 10%;
 	margin: 100px 500px;
+	background-color: lavender;
 }
 
 th {
@@ -29,6 +31,13 @@ h1 {
 	margin: 130px 500px;
 	font-size: 60px;
 	color: white;
+	text-align: left;
+}
+
+input[type=submit] {
+	background-color: green;
+	color: white;
+	margin: 30px 30px;
 }
 </style>
 </head>
@@ -37,13 +46,8 @@ h1 {
 		<b><u>List of Users</u></b>
 	</h1>
 	<table>
-		<tr>
-			<th>NAME</th>
-			<th>STATUS</th>
-		</tr>
 		<tr ng-repeat="u in users">
 			<td>{{u.nam}}</td>
-			<td>{{u.status}}</td>
 			<td><input type="submit" ng-click="friendRequest(u.id)"
 				class="btn" value="Send Friend Request"></td>
 		</tr>

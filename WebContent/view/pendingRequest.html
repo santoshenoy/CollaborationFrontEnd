@@ -3,21 +3,56 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<style>
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 10%;
+	margin: 100px 500px;
+	background-color: lavender;
+}
+
+th {
+	text-align: center;
+	border: 1px solid black;
+	color: lawngreen;
+	font-size: 30px;
+	font-weight: 900;
+}
+
+td {
+	text-align: center;
+	border: 1px solid black;
+	color: navy;
+	font-weight: bold;
+}
+
+h1 {
+	margin: 130px 500px;
+	font-size: 60px;
+	color: white;
+}
+</style>
 </head>
 <body>
+	<h1>
+		<b><u>Pending Friend Requests</u></b>
+	</h1>
 	<table>
-	<tr>
-		<th>Friend Name</th>
-		<th>Accept</th>
-		<th>Reject</th>
-	</tr>
-	
-	<tr ng-repeat="p in pendingRequest">
-		<td>{{p.u_id}}</td>
-		<td><a href="" ng-click="acceptRequest(p.u_id)">Accept Request</a></td>
-		<td><a href="" ng-click="rejectRequest(p.u_id)">Reject Request</a></td>
-	</tr>
-</table>
-	
+		<tr>
+			<th>Friend Name</th>
+			<th>Accept</th>
+			<th>Reject</th>
+		</tr>
+
+		<tr ng-repeat="p in pendingRequest">
+			<td>{{p.u_id}}</td>
+			<td><a href="" ng-click="acceptRequest(p.u_id)">Accept
+					Request</a></td>
+			<td><a href="" ng-click="rejectRequest(p.u_id)">Reject
+					Request</a></td>
+		</tr>
+	</table>
+
 </body>
 </html>
