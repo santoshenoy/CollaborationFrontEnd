@@ -3,21 +3,59 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<style>
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 10%;
+	margin: 300px 600px;
+	background-color: lavender;
+}
+
+th {
+	text-align: center;
+	border: 1px solid black;
+	color: lawngreen;
+	font-size: 30px;
+	font-weight: 900;
+}
+
+td {
+	text-align: center;
+	border: 1px solid black;
+	color: navy;
+	font-weight: bold;
+}
+
+input[type=submit] {
+	background-color: green;
+	color: white;
+	padding: 14px 70px;
+	display: block;
+	margin: 18px 30px;
+	text-align: center;
+	border: none;
+	cursor: pointer;
+	width: 60%;
+}
+
+</style>
 </head>
 <body>
 	<div align="center">
 		<form method="post"
 			action="http://localhost:8083/CollaborationRestController/doUpload"
 			enctype="multipart/form-data">
-			<table border="0">
+			<table>
 				<tr>
 					<td>Profile Pic:</td>
-					<td><input type="file" name="uploadFile" /></td>
+					<td> <input type="file" name="uploadFile"
+						title="Click to Choose a Profile Picture" /></td>
 				</tr>
 
 				<tr>
 					<td colspan="2" align="center"><input type="submit"
-						value="Upload" /></td>
+						value="Upload" title="Click to Upload Picture" /></td>
 				</tr>
 			</table>
 		</form>

@@ -3,8 +3,9 @@
 <head>
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" href="BootStrap/resources/css/bootstrap.min.css">
-<script src="BootStrap/resources/js/bootstrap.min.js"></script>
 <script src="BootStrap/resources/js/jquery.min.js"></script>
+<script src="BootStrap/resources/js/bootstrap.min.js"></script>
+
 <link href='//fonts.googleapis.com/css?family=Sriracha' rel='stylesheet'>
 <link href='//fonts.googleapis.com/css?family=Cutive' rel='stylesheet'>
 <title>Welcome to WorldLink!</title>
@@ -43,32 +44,71 @@ body {
 					<a class="navbar-brand" href="/CollaborationFrontEnd"
 						style="color: gold"><strong>WORLDLINK</strong> </a>
 				</div>
-				<nav class="navbar navbar-nav navbar-left">
-					<a href="#/blog" style="color: chartreuse; font-size: 19px"><strong>Blog</strong></a>
+				<ul class="navbar navbar-nav navbar-left">
+
 					<a href="#/pendingRequest" ng-show="currentUser.id"
 						style="color: chartreuse; font-size: 17px"><strong>Pending
-							Friend Requests</strong></a> <a href="#/job" ng-show="currentUser.id"
-						style="color: chartreuse; font-size: 17px"><strong>Job</strong></a>
+							Friend Requests</strong></a> &nbsp; &nbsp;
 					<a href="#/listuser" ng-show="currentUser.id"
 						style="color: chartreuse; font-size: 17px"><strong>List
-							of Users</strong></a> <a href="#/bloglist"
-						style="color: chartreuse; font-size: 17px"><strong>Blog
-							List</strong></a> <a href="#/joblist" ng-show="currentUser.id"
-						style="color: chartreuse; font-size: 17px"><strong>Job
-							List</strong></a> <a href="#/forum" style="color: chartreuse; font-size: 17px"><strong>Forum</strong></a>
-					<a href="#/forumlist" style="color: chartreuse; font-size: 17px"><strong>Forum
-							List</strong></a> <a href="#/event" ng-show="currentUser.id"
-						style="color: chartreuse; font-size: 17px"><strong>Event</strong></a>
-					<a href="#/eventlist" ng-show="currentUser.id"
-						style="color: chartreuse; font-size: 17px"><strong>Event
-							List</strong></a> <a href="#/friendlist" ng-show="currentUser.id"
-						style="color: chartreuse; font-size: 17px"><strong>FriendList</strong></a>
+							of Users</strong></a> &nbsp;
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" style="color: chartreuse; font-size: 17px">
+							<strong>Blog</strong><span class="caret"></span>
+					</a>
+						<ul class="dropdown-menu">
+							<li><a href="#/blog" style="color: red; font-size: 15px"><strong>Add
+										a New Blog</strong></a></li>
+							<li><a href="#/bloglist" style="color: red; font-size: 15px"><strong>Blog
+										List</strong></a></li>
+						</ul></li>
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" style="color: chartreuse; font-size: 17px">
+							<strong>Forum</strong><span class="caret"></span>
+					</a>
+						<ul class="dropdown-menu">
+							<li><a href="#/forum" style="color: red; font-size: 15px"><strong>Add
+										a New Forum</strong></a></li>
+							<li><a href="#/forumlist"
+								style="color: red; font-size: 15px"><strong>Forum
+										List</strong></a></li>
+						</ul></li>
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" style="color: chartreuse; font-size: 17px"
+						ng-show="currentUser.id"> <strong>Event</strong><span
+							class="caret"></span>
+					</a>
+						<ul class="dropdown-menu">
+							<li><a href="#/event" style="color: red; font-size: 15px"><strong>Add
+										a New Event</strong></a></li>
+							<li><a href="#/eventlist"
+								style="color: red; font-size: 15px"><strong>Event
+										List</strong></a></li>
+						</ul></li>
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" style="color: chartreuse; font-size: 17px"
+						ng-show="currentUser.id"> <strong>Job</strong><span
+							class="caret"></span>
+					</a>
+						<ul class="dropdown-menu">
+							<li><a href="#/job" style="color: red; font-size: 15px"><strong>Add
+										a New Job</strong></a></li>
+							<li><a href="#/joblist" style="color: red; font-size: 15px"><strong>Job
+										List</strong></a></li>
+						</ul></li>
+					<a href="#/friendlist" ng-show="currentUser.id"
+						style="color: chartreuse; font-size: 17px"><strong>Your
+							Friends</strong></a> &nbsp; &nbsp;
 					<a href="#/fileUpload" ng-show="currentUser.id"
-						style="color: chartreuse; font-size: 17px"><strong>FileUpload</strong></a>
+						style="color: chartreuse; font-size: 17px"><strong>Profile
+							Picture Upload</strong></a> &nbsp; &nbsp; &nbsp;
 					<a href="" ng-show="currentUser.id"> <img
-						src="Images/{{currentUser.nam}}" height="65" width="65"></a>
-				</nav>
-				<nav class="navbar navbar-nav navbar-right">
+						src="Images/{{currentUser.nam}}" height="65" width="65"
+						class="img-circle"></a>
+			</div>
+			</ul>
+			<nav class="navbar navbar-nav navbar-right">
+				<div class="container-fluid">
 					<a href="#/login" ng-hide="currentUser.id"
 						style="color: yellow; font-size: 18px"><span
 						class="glyphicon glyphicon-log-in" style="color: white"></span> <strong>Log
@@ -80,8 +120,8 @@ body {
 						class="glyphicon glyphicon-log-out"
 						style="color: white; font-size: 18px"></span><strong>
 							Logout</strong></a>
-				</nav>
-			</div>
+				</div>
+			</nav>
 		</nav>
 	</div>
 </body>
