@@ -4,50 +4,70 @@
 <meta charset="ISO-8859-1">
 <title>Blog!</title>
 <style>
-input[type=button] {
+input[type=submit] {
 	background-color: green;
 	color: white;
 	padding: 14px 70px;
 	display: block;
-	margin: left;
+	margin: auto;
 	text-align: center;
 	border: none;
 	cursor: pointer;
-	width: 20%;
+	width: 50%;
 }
 
 input[type=text] {
 	padding: 12px 20px;
-	margin: 8px 0;
+	margin: 18px 18px;
 	display: inline-block;
 	border: 1px solid #ccc;
 	box-sizing: border-box;
-	width: 35%;
+	width: 80%;
 }
 
 input[type=date] {
 	padding: 12px 20px;
-	margin: 8px 0;
+	margin: 18px 18px;
 	display: inline-block;
 	border: 1px solid #ccc;
 	box-sizing: border-box;
-	width: 20%;
+	width: 80%;
+}
+
+form {
+	background-color: lavender;
+	border: 3px solid #f1f1f1;
+	width: 50%;
+	margin: 200px 500px;
+}
+
+textarea {
+	padding: 12px 20px;
+	margin: 18px 18px;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	width: 80%;
 }
 </style>
 </head>
 <body>
-	<form>
-		<input type="text" ng-model="blog.id" placeholder="Enter Blog ID"
-			required> <br> <input type="text" ng-model="blog.name"
-			placeholder="Enter Name" required> <br> <input
-			type="text" ng-model="blog.description"
-			placeholder="Enter Description" required> <br> <input
-			type="text" ng-model="blog.u_id" placeholder="Enter User ID" required>
-		<br> <input type="text" ng-model="blog.status"
-			placeholder="Enter Blog Status" required> <br> <input
-			type="date" ng-model="blog.b_date" required> <br> <input
-			type="button" ng-click="registerBlog()" value="Register"
-			class="btn btn-success" title="Click to Register Blog">
-	</form>
+	<div ng-controller="BlogController as ctrl">
+		<form name="form" ng-submit="ctrl.registerBlog()" role="form">
+			<input type="text" ng-model="blog.id" placeholder="Enter Blog ID"
+				required="true"> <br> <input type="text"
+				ng-model="blog.name" placeholder="Enter Blog Name" required="true">
+			<br>
+			<textarea rows="30" ng-model="blog.description"
+				placeholder="Write your Blog here..." required="true"> </textarea>
+			<br> <input type="text" ng-model="blog.u_id"
+				placeholder="Enter User ID" required="true"> <br> <input
+				type="text" ng-model="blog.status" placeholder="Enter Blog Status"
+				required="true"> <br> <input type="date"
+				ng-model="blog.b_date" required="true"> <br> <input
+				type="submit" value="Register" class="btn btn-success"
+				title="Click to Register Blog">
+		</form>
+	</div>
 </body>
 </html>

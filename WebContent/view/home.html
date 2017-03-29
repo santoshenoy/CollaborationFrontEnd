@@ -3,8 +3,45 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<style>
+.floating-box {
+	float: center;
+	width: 800px;
+	height: 400px;
+	margin: 200px 400px;
+	border: 2px solid dodgerblue;
+	background: url(BootStrap/resources/images/InlineBackground.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+div.transbox {
+	margin: 120px;
+	background-color: #ffffff;
+	border: 1px solid black;
+	opacity: 0.7;
+}
+
+div.transbox p {
+	margin: 5%;
+	font-weight: bold;
+	color: black;
+	font-size: 15px;
+}
+</style>
 </head>
 <body>
-	<div ng-controller="HomeController"></div>
+	<div class="floating-box">
+		<div class="transbox">
+			<p>
+				Make new Friends, Connect with old Friends, Chat with Friends, Read
+				and Write Blogs & Forums, Discover new Events near your place, Find
+				that Dream Job of yours, Help others find Jobs! WorldLink is your
+				Connection to the World! <a href="#/register">Sign Up</a> on
+				WorldLink for all this and much more! P.S. It's Free and always will
+				be!
+			</p>
+		</div>
+	</div>
 </body>
 </html>

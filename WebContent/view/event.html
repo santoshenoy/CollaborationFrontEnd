@@ -4,34 +4,50 @@
 <meta charset="ISO-8859-1">
 <title>Events!</title>
 <style>
-input[type=button] {
+input[type=submit] {
 	background-color: green;
 	color: white;
 	padding: 14px 70px;
 	display: block;
-	margin: left;
+	margin: auto;
 	text-align: center;
 	border: none;
 	cursor: pointer;
-	width: 20%;
+	width: 50%;
 }
 
 input[type=text] {
 	padding: 12px 20px;
-	margin: 8px 0;
+	margin: 18px 18px;
 	display: inline-block;
 	border: 1px solid #ccc;
 	box-sizing: border-box;
-	width: 35%;
+	width: 80%;
+}
+
+textarea {
+	padding: 12px 20px;
+	margin: 18px 18px;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	width: 80%;
 }
 
 input[type=date] {
 	padding: 12px 20px;
-	margin: 8px 0;
+	margin: 18px 18px;
 	display: inline-block;
 	border: 1px solid #ccc;
 	box-sizing: border-box;
-	width: 20%;
+	width: 80%;
+}
+
+form {
+	background-color: lavender;
+	border: 3px solid #f1f1f1;
+	width: 50%;
+	margin: 200px 500px;
 }
 </style>
 </head>
@@ -39,13 +55,13 @@ input[type=date] {
 	<form>
 		<input type="text" ng-model="event.id" placeholder="Enter Event ID"
 			required> <br> <input type="text" ng-model="event.name"
-			placeholder="Enter Event Name" required> <br> <input
-			type="text" ng-model="event.description"
-			placeholder="Enter Event Description" required> <br> <input
-			type="text" ng-model="event.venue" placeholder="Enter Event Venue"
-			required> <br> <input type="date"
-			ng-model="event.date_time" required> <br> <input
-			type="button" ng-click="registerEvent()" value="Register"
+			placeholder="Enter Event Name" required> <br>
+		<textarea rows="20" ng-model="event.description"
+			placeholder="Enter Event Description" height="50" required> </textarea>
+		<br> <input type="text" ng-model="event.venue"
+			placeholder="Enter Event Venue" required> <br> <input
+			type="date" ng-model="event.date_time" required> <br> <input
+			type="submit" ng-click="registerEvent()" value="Register"
 			class="btn btn-success" title="Click to Register Event">
 	</form>
 </body>

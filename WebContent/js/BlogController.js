@@ -11,7 +11,7 @@ app.controller('BlogController', function($scope, $location, BlogService) {
 		date2 : ''
 	};
 	$scope.message;
-	$scope.registerBlog = function() {
+	self.registerBlog = function() {
 		console.log('Entered function to save in Blog Controller')
 		BlogService.registerBlog($scope.blog).then(function(response) {
 			console.log("Blog Registration success" + response.status)

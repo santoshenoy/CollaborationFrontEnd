@@ -5,7 +5,6 @@
 <link rel="stylesheet" href="BootStrap/resources/css/bootstrap.min.css">
 <script src="BootStrap/resources/js/jquery.min.js"></script>
 <script src="BootStrap/resources/js/bootstrap.min.js"></script>
-
 <link href='//fonts.googleapis.com/css?family=Sriracha' rel='stylesheet'>
 <link href='//fonts.googleapis.com/css?family=Cutive' rel='stylesheet'>
 <title>Welcome to WorldLink!</title>
@@ -18,7 +17,7 @@ body {
 	background-attachment: fixed;
 }
 
-.navbar-default {
+.navbar-default.navbar-fixed-top {
 	background: url(BootStrap/resources/images/backgroundheader.jpg);
 }
 
@@ -34,6 +33,10 @@ body {
 .navbar-nav.navbar-right {
 	font-family: 'Cutive';
 }
+
+ul {
+	list-style-type: none;
+}
 </style>
 </head>
 <body>
@@ -45,17 +48,10 @@ body {
 						style="color: gold"><strong>WORLDLINK</strong> </a>
 				</div>
 				<ul class="navbar navbar-nav navbar-left">
-
-					<a href="#/pendingRequest" ng-show="currentUser.id"
-						style="color: chartreuse; font-size: 17px"><strong>Pending
-							Friend Requests</strong></a> &nbsp; &nbsp;
-					<a href="#/listuser" ng-show="currentUser.id"
-						style="color: chartreuse; font-size: 17px"><strong>List
-							of Users</strong></a> &nbsp;
 					<li class="dropdown"><a class="dropdown-toggle"
 						data-toggle="dropdown" style="color: chartreuse; font-size: 17px">
 							<strong>Blog</strong><span class="caret"></span>
-					</a>
+					</a> &nbsp; &nbsp;
 						<ul class="dropdown-menu">
 							<li><a href="#/blog" style="color: red; font-size: 15px"><strong>Add
 										a New Blog</strong></a></li>
@@ -65,7 +61,7 @@ body {
 					<li class="dropdown"><a class="dropdown-toggle"
 						data-toggle="dropdown" style="color: chartreuse; font-size: 17px">
 							<strong>Forum</strong><span class="caret"></span>
-					</a>
+					</a> &nbsp; &nbsp;
 						<ul class="dropdown-menu">
 							<li><a href="#/forum" style="color: red; font-size: 15px"><strong>Add
 										a New Forum</strong></a></li>
@@ -77,7 +73,7 @@ body {
 						data-toggle="dropdown" style="color: chartreuse; font-size: 17px"
 						ng-show="currentUser.id"> <strong>Event</strong><span
 							class="caret"></span>
-					</a>
+					</a> &nbsp; &nbsp;
 						<ul class="dropdown-menu">
 							<li><a href="#/event" style="color: red; font-size: 15px"><strong>Add
 										a New Event</strong></a></li>
@@ -89,19 +85,25 @@ body {
 						data-toggle="dropdown" style="color: chartreuse; font-size: 17px"
 						ng-show="currentUser.id"> <strong>Job</strong><span
 							class="caret"></span>
-					</a>
+					</a> &nbsp; &nbsp;
 						<ul class="dropdown-menu">
 							<li><a href="#/job" style="color: red; font-size: 15px"><strong>Add
 										a New Job</strong></a></li>
 							<li><a href="#/joblist" style="color: red; font-size: 15px"><strong>Job
 										List</strong></a></li>
 						</ul></li>
-					<a href="#/friendlist" ng-show="currentUser.id"
+					<li><a href="#/pendingRequest" ng-show="currentUser.id"
+						style="color: chartreuse; font-size: 17px"><strong>Pending
+								Friend Requests</strong></a> &nbsp; &nbsp;</li>
+					<li><a href="#/listuser" ng-show="currentUser.id"
+						style="color: chartreuse; font-size: 17px"><strong>List
+								of Users</strong></a> &nbsp; &nbsp;</li>
+					<li><a href="#/friendlist" ng-show="currentUser.id"
 						style="color: chartreuse; font-size: 17px"><strong>Your
-							Friends</strong></a> &nbsp; &nbsp;
-					<a href="#/fileUpload" ng-show="currentUser.id"
+								Friends</strong></a> &nbsp; &nbsp;</li>
+					<li><a href="#/fileUpload" ng-show="currentUser.id"
 						style="color: chartreuse; font-size: 17px"><strong>Profile
-							Picture Upload</strong></a> &nbsp; &nbsp; &nbsp;
+								Picture Upload</strong></a> &nbsp; &nbsp; &nbsp;</li>
 					<a href="" ng-show="currentUser.id"> <img
 						src="Images/{{currentUser.nam}}" height="65" width="65"
 						class="img-circle"></a>
@@ -123,9 +125,56 @@ body {
 				</div>
 			</nav>
 		</nav>
+
 	</div>
 </body>
 <div ng-view></div>
+<nav class="navbar navbar-default" style="background-color: gainsboro"
+	align="center">
+	<div class="row">
+		<div class="col-sm-4">
+			<ul style="list-style-type: none">
+				<li style="font-size: 15px"><strong> <u>WorldLink:
+					</u></strong></li>
+				<br>
+				<li><a href="aboutus">About Us</a></li>
+				<li><a href="contactus">Contact Us</a></li>
+				<li><a href="locations">Locations</a></li>
+			</ul>
+		</div>
+		<div class="col-sm-4">
+			<ul style="list-style-type: none">
+				<li style="font-size: 15px"><strong> <u>Policy
+							Details:</u>
+				</strong></li>
+				<br>
+				<li><a href="faq">FAQ</a></li>
+				<li><a href="terms">Terms & Conditions</a></li>
+				<li><a href="privacy">Privacy</a></li>
+				<li><a href="help">Help</a></li>
+			</ul>
+		</div>
+		<div class="col-sm-4">
+			<ul style="list-style-type: none">
+				<li style="font-size: 15px"><strong> <u>Miscellaneous
+							Details: </u></strong></li>
+				<br>
+				<li><a href="advertise">Advertise With Us</a></li>
+				<li><a href="Careers">Careers</a></li>
+				<li><a href="mobile">Mobile</a></li>
+				<li><a href="games">Games</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<br>
+<div class="container">
+	<center>
+		<p style="color: navy; font-size: 15px">
+			<b>Copyright ©2016-2017 WorldLink.com, Inc. All Rights Reserved.</b>
+		</p>
+	</center>
+</div>
 <script src="lib/angular.min.js"></script>
 <script src="lib/angular-route.js"></script>
 <script src="js/app.js"></script>
