@@ -86,6 +86,15 @@ app.config(function($routeProvider) {
 		controller : 'UserController'
 	})
 
+	.when('/loggedIn', {
+		templateUrl : 'view/loggedIn.html',
+		controller : 'UserController'
+	})
+
+	.when('/aboutus', {
+		templateUrl : 'view/aboutus.html',
+	})
+
 	.otherwise({
 		redirectTo : '/'
 	});

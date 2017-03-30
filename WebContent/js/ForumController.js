@@ -1,6 +1,7 @@
 app.controller('ForumController', function($scope, $location, ForumService) {
 	console.log('Entered ForumController')
 	$scope.forums;
+	var self = this;
 	$scope.forum = {
 		id : '',
 		name : '',
@@ -11,7 +12,7 @@ app.controller('ForumController', function($scope, $location, ForumService) {
 		date3 : ''
 	};
 	$scope.message;
-	$scope.registerForum = function() {
+	self.registerForum = function() {
 		console.log('Entered function to save in Forum Controller')
 		ForumService.registerForum($scope.forum).then(function(response) {
 			console.log("Forum Registration success" + response.status)

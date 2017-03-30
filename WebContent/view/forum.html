@@ -52,19 +52,22 @@ textarea {
 </style>
 </head>
 <body>
-	<form>
-		<input type="text" ng-model="forum.id" placeholder="Enter Forum ID"
-			required> <br> <input type="text" ng-model="forum.name"
-			placeholder="Enter Forum Name" required> <br>
-		<textarea rows="30" ng-model="forum.description"
-			placeholder="Describe the Forum here..." required> </textarea>
-		<br> <input type="text" ng-model="forum.u_id"
-			placeholder="Enter User ID" required> <br> <input
-			type="text" ng-model="forum.status" placeholder="Enter Forum Status"
-			required> <br> <input type="date"
-			ng-model="forum.f_date" required> <br> <input
-			type="submit" ng-click="registerForum()" value="Register"
-			title="Click to Register Forum" class="btn btn-success">
-	</form>
+	<div ng-controller="ForumController as ctrl">
+		<form name="form" ng-submit="ctrl.registerForum()" role="form">
+			<input type="text" ng-model="forum.id" placeholder="Enter Forum ID"
+				required="true"> <br> <input type="text"
+				ng-model="forum.name" placeholder="Enter Forum Name" required="true">
+			<br>
+			<textarea rows="30" ng-model="forum.description"
+				placeholder="Describe the Forum here..." required="true"> </textarea>
+			<br> <input type="text" ng-model="forum.u_id"
+				placeholder="Enter User ID" required="true"> <br> <input
+				type="text" ng-model="forum.status" placeholder="Enter Forum Status"
+				required="true"> <br> <input type="date"
+				ng-model="forum.f_date" required="true"> <br> <input
+				type="submit" value="Register" title="Click to Register Forum"
+				class="btn btn-success">
+		</form>
+	</div>
 </body>
 </html>

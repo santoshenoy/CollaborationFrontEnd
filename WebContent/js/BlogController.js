@@ -1,6 +1,7 @@
 app.controller('BlogController', function($scope, $location, BlogService) {
 	console.log('Entered BlogController')
 	$scope.blogs;
+	var self = this;
 	$scope.blog = {
 		id : '',
 		name : '',

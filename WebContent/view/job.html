@@ -52,20 +52,22 @@ textarea {
 </style>
 </head>
 <body>
-	<form>
-		<input type="text" ng-model="job.title" placeholder="Enter Job Title"
-			required> <br> <input type="text" ng-model="job.u_id"
-			placeholder="Enter User Id" required> <br>
-		<textarea rows="20" ng-model="job.description"
-			placeholder="Describe the Job" required> </textarea>
-		<br> <input type="date" ng-model="job.dateTime" required>
-		<br> <input type="text" ng-model="job.qualification"
-			placeholder="Enter Job Qualification" required> <br> <input
-			type="text" ng-model="job.status" placeholder="Enter Job Status"
-			required> <br> <input type="submit"
-			ng-click="registerJob()" value="Register"
-			title="Click to Register Job" class="btn btn-success">
-
-	</form>
+	<div ng-controller="JobController as ctrl">
+		<form name="form" ng-submit="ctrl.registerJob()" role="form">
+			<input type="text" ng-model="job.title" placeholder="Enter Job Title"
+				required="true"> <br> <input type="text"
+				ng-model="job.u_id" placeholder="Enter User Id" required="true">
+			<br>
+			<textarea rows="20" ng-model="job.description"
+				placeholder="Describe the Job" required="true"> </textarea>
+			<br> <input type="date" ng-model="job.dateTime" required="true">
+			<br> <input type="text" ng-model="job.qualification"
+				placeholder="Enter Job Qualification" required="true"> <br>
+			<input type="text" ng-model="job.status"
+				placeholder="Enter Job Status" required="true"> <br> <input
+				type="submit" value="Register" title="Click to Register Job"
+				class="btn btn-success">
+		</form>
+	</div>
 </body>
 </html>

@@ -101,12 +101,6 @@ ul {
 					<li><a href="#/friendlist" ng-show="currentUser.id"
 						style="color: chartreuse; font-size: 17px"><strong>Your
 								Friends</strong></a> &nbsp; &nbsp;</li>
-					<li><a href="#/fileUpload" ng-show="currentUser.id"
-						style="color: chartreuse; font-size: 17px"><strong>Profile
-								Picture Upload</strong></a> &nbsp; &nbsp; &nbsp;</li>
-					<a href="" ng-show="currentUser.id"> <img
-						src="Images/{{currentUser.nam}}" height="65" width="65"
-						class="img-circle"></a>
 			</div>
 			</ul>
 			<nav class="navbar navbar-nav navbar-right">
@@ -117,15 +111,20 @@ ul {
 							In</strong></a> <a href="#/register" ng-hide="currentUser.id"
 						style="color: yellow; font-size: 18px"><span
 						class="glyphicon glyphicon-user" style="color: white"></span> <strong>Sign
-							Up</strong></a><a ng-click="ctrl.logout()" ng-show="currentUser.id"
-						style="color: yellow"><span
-						class="glyphicon glyphicon-log-out"
-						style="color: white; font-size: 18px"></span><strong>
-							Logout</strong></a>
+							Up</strong></a> <a href="" ng-show="currentUser.id"> <img
+						src="Images/{{currentUser.nam}}" height="90" width="90"
+						class="img-circle"></a> <a class="dropdown-toggle"
+						data-toggle="dropdown" ng-show="currentUser.id"
+						style="color: chartreuse; font-size: 17px"> <strong>{{currentUser.nam}}</strong><span
+						class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li ng-show="currentUser.id"><a href="#/fileUpload">Upload
+								Profile Picture</a></li>
+						<li><a ng-click="ctrl.logout()">Log Out</a></li>
 				</div>
 			</nav>
 		</nav>
-
 	</div>
 </body>
 <div ng-view></div>
@@ -137,9 +136,9 @@ ul {
 				<li style="font-size: 15px"><strong> <u>WorldLink:
 					</u></strong></li>
 				<br>
-				<li><a href="aboutus">About Us</a></li>
-				<li><a href="contactus">Contact Us</a></li>
-				<li><a href="locations">Locations</a></li>
+				<li><a href="#/aboutus">About Us</a></li>
+				<li><a href="#/contactus">Contact Us</a></li>
+				<li><a href="#/locations">Locations</a></li>
 			</ul>
 		</div>
 		<div class="col-sm-4">
@@ -148,10 +147,10 @@ ul {
 							Details:</u>
 				</strong></li>
 				<br>
-				<li><a href="faq">FAQ</a></li>
-				<li><a href="terms">Terms & Conditions</a></li>
-				<li><a href="privacy">Privacy</a></li>
-				<li><a href="help">Help</a></li>
+				<li><a href="#/faq">FAQ</a></li>
+				<li><a href="#/terms">Terms & Conditions</a></li>
+				<li><a href="#/privacy">Privacy</a></li>
+				<li><a href="#/help">Help</a></li>
 			</ul>
 		</div>
 		<div class="col-sm-4">
@@ -159,10 +158,9 @@ ul {
 				<li style="font-size: 15px"><strong> <u>Miscellaneous
 							Details: </u></strong></li>
 				<br>
-				<li><a href="advertise">Advertise With Us</a></li>
-				<li><a href="Careers">Careers</a></li>
-				<li><a href="mobile">Mobile</a></li>
-				<li><a href="games">Games</a></li>
+				<li><a href="#/advertise">Advertise With Us</a></li>
+				<li><a href="#/Careers">Careers</a></li>
+				<li><a href="#/mobile">Mobile</a></li>
 			</ul>
 		</div>
 	</div>

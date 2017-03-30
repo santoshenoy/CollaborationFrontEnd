@@ -78,7 +78,7 @@ app
 														+ $rootScope.currentUser;
 												$cookieStore.put('currentUser',
 														$rootScope.currentUser)
-												$location.path("/");
+												$location.path("/loggedIn");
 											}
 
 										},

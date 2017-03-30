@@ -1,6 +1,7 @@
 app.controller('EventController', function($scope, $location, EventService) {
 	console.log('Entered EventController')
 	$scope.events;
+	var self = this;
 	$scope.event = {
 		id : '',
 		name : '',
@@ -10,7 +11,7 @@ app.controller('EventController', function($scope, $location, EventService) {
 		date4 : ''
 	};
 	$scope.message;
-	$scope.registerEvent = function() {
+	self.registerEvent = function() {
 		console.log('Entered function to save in Event Controller')
 		EventService.registerEvent($scope.event).then(function(response) {
 			console.log("Event Registration success" + response.status)

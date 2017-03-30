@@ -1,6 +1,7 @@
 app.controller('JobController', function($scope, $location, JobService) {
 	console.log('Entered JobController')
 	$scope.jobs;
+	var self = this;
 	$scope.job = {
 		title : '',
 		u_id : '',
@@ -11,7 +12,7 @@ app.controller('JobController', function($scope, $location, JobService) {
 		date1 : ''
 	};
 	$scope.message;
-	$scope.registerJob = function() {
+	self.registerJob = function() {
 		console.log('Entered function to save in Job Controller')
 		JobService.registerJob($scope.job).then(function(response) {
 			console.log("Job Registration success" + response.status)
